@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { useProducts, ProductFilters } from '../../contexts/ProductContext';
-import { Slider } from 'lucide-react';
+import { SlidersHorizontal } from 'lucide-react';
 
 interface ProductFilterProps {
   currentFilters: ProductFilters;
@@ -75,7 +75,7 @@ const ProductFilter: React.FC<ProductFilterProps> = ({ currentFilters, onFilterC
           className="flex items-center justify-between w-full text-left"
         >
           <span className="font-medium">Filtros</span>
-          <Slider size={20} />
+          <SlidersHorizontal size={20} />
         </button>
       </div>
 
