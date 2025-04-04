@@ -1,0 +1,303 @@
+
+[
+  {
+    "id": "1",
+    "name": "Smartphone Galaxy S23",
+    "description": "Smartphone Samsung Galaxy S23 com 128GB de armazenamento, 8GB de RAM, câmera tripla de 50MP e tela AMOLED de 6.1 polegadas.",
+    "price": 3799.99,
+    "images": [
+      "https://source.unsplash.com/random/800x600/?smartphone",
+      "https://source.unsplash.com/random/800x600/?cellphone",
+      "https://source.unsplash.com/random/800x600/?samsung"
+    ],
+    "category": "Eletrônicos",
+    "stock": 25,
+    "seller": {
+      "id": "s1",
+      "name": "Tech Brasil Store",
+      "reputation": 4.8,
+      "location": {
+        "country": "Brasil",
+        "state": "São Paulo"
+      }
+    },
+    "createdAt": "2023-10-15T14:22:11Z",
+    "sales": 152,
+    "isActive": true
+  },
+  {
+    "id": "2",
+    "name": "Notebook Dell Inspiron",
+    "description": "Notebook Dell Inspiron com processador Intel Core i5, 8GB de RAM, SSD de 256GB e tela Full HD de 15.6 polegadas.",
+    "price": 4299.90,
+    "images": [
+      "https://source.unsplash.com/random/800x600/?laptop",
+      "https://source.unsplash.com/random/800x600/?notebook",
+      "https://source.unsplash.com/random/800x600/?dell"
+    ],
+    "category": "Eletrônicos",
+    "stock": 12,
+    "seller": {
+      "id": "s2",
+      "name": "Informática Prime",
+      "reputation": 4.6,
+      "location": {
+        "country": "Brasil",
+        "state": "Rio de Janeiro"
+      }
+    },
+    "createdAt": "2023-10-20T09:45:33Z",
+    "sales": 87,
+    "isActive": true
+  },
+  {
+    "id": "3",
+    "name": "Tênis Nike Air Max",
+    "description": "Tênis Nike Air Max para corrida, com tecnologia de amortecimento de impacto, malha respirável e solado de borracha.",
+    "price": 549.90,
+    "images": [
+      "https://source.unsplash.com/random/800x600/?shoes",
+      "https://source.unsplash.com/random/800x600/?nike",
+      "https://source.unsplash.com/random/800x600/?sneakers"
+    ],
+    "category": "Calçados",
+    "stock": 35,
+    "seller": {
+      "id": "s3",
+      "name": "Esporte Total",
+      "reputation": 4.9,
+      "location": {
+        "country": "Brasil",
+        "state": "Bahia"
+      }
+    },
+    "createdAt": "2023-11-05T16:08:45Z",
+    "sales": 214,
+    "isActive": true
+  },
+  {
+    "id": "4",
+    "name": "Smart TV LG 50 polegadas",
+    "description": "Smart TV LG de 50 polegadas com resolução 4K, sistema webOS, HDR e conectividade Wi-Fi.",
+    "price": 2799.90,
+    "images": [
+      "https://source.unsplash.com/random/800x600/?tv",
+      "https://source.unsplash.com/random/800x600/?smarttv",
+      "https://source.unsplash.com/random/800x600/?television"
+    ],
+    "category": "Eletrônicos",
+    "stock": 8,
+    "seller": {
+      "id": "s4",
+      "name": "Mega Eletrônicos",
+      "reputation": 4.5,
+      "location": {
+        "country": "Brasil",
+        "state": "Minas Gerais"
+      }
+    },
+    "createdAt": "2023-11-12T11:32:18Z",
+    "sales": 64,
+    "isActive": true
+  },
+  {
+    "id": "5",
+    "name": "Cafeteira Expresso Nespresso",
+    "description": "Cafeteira Expresso Nespresso com sistema de cápsulas, reservatório de água de 0.7L e bandeja coletora removível.",
+    "price": 799.90,
+    "images": [
+      "https://source.unsplash.com/random/800x600/?coffeemachine",
+      "https://source.unsplash.com/random/800x600/?nespresso",
+      "https://source.unsplash.com/random/800x600/?coffee"
+    ],
+    "category": "Eletrodomésticos",
+    "stock": 22,
+    "seller": {
+      "id": "s2",
+      "name": "Informática Prime",
+      "reputation": 4.6,
+      "location": {
+        "country": "Brasil",
+        "state": "Rio de Janeiro"
+      }
+    },
+    "createdAt": "2023-11-18T08:14:59Z",
+    "sales": 118,
+    "isActive": true
+  },
+  {
+    "id": "6",
+    "name": "Relógio Inteligente Smartwatch",
+    "description": "Relógio inteligente com monitoramento cardíaco, contagem de passos, notificações e bateria de longa duração.",
+    "price": 299.90,
+    "images": [
+      "https://source.unsplash.com/random/800x600/?smartwatch",
+      "https://source.unsplash.com/random/800x600/?watch",
+      "https://source.unsplash.com/random/800x600/?wearable"
+    ],
+    "category": "Acessórios",
+    "stock": 45,
+    "seller": {
+      "id": "s5",
+      "name": "Tech Store Chile",
+      "reputation": 4.7,
+      "location": {
+        "country": "Chile",
+        "state": "Santiago"
+      }
+    },
+    "createdAt": "2023-12-02T15:27:31Z",
+    "sales": 173,
+    "isActive": true
+  },
+  {
+    "id": "7",
+    "name": "Camiseta Adidas Algodão",
+    "description": "Camiseta Adidas confeccionada em algodão de alta qualidade, confortável e durável, ideal para atividades físicas.",
+    "price": 119.90,
+    "images": [
+      "https://source.unsplash.com/random/800x600/?tshirt",
+      "https://source.unsplash.com/random/800x600/?adidas",
+      "https://source.unsplash.com/random/800x600/?sportswear"
+    ],
+    "category": "Vestuário",
+    "stock": 60,
+    "seller": {
+      "id": "s6",
+      "name": "Deportes Argentina",
+      "reputation": 4.4,
+      "location": {
+        "country": "Argentina",
+        "state": "Buenos Aires"
+      }
+    },
+    "createdAt": "2023-12-10T10:51:42Z",
+    "sales": 205,
+    "isActive": true
+  },
+  {
+    "id": "8",
+    "name": "Panela Elétrica Multifuncional",
+    "description": "Panela elétrica multifuncional 10 em 1, com funções de pressão, lenta, arroz, vapor, e muito mais.",
+    "price": 499.90,
+    "images": [
+      "https://source.unsplash.com/random/800x600/?cooker",
+      "https://source.unsplash.com/random/800x600/?instapot",
+      "https://source.unsplash.com/random/800x600/?kitchen"
+    ],
+    "category": "Eletrodomésticos",
+    "stock": 18,
+    "seller": {
+      "id": "s7",
+      "name": "Casa & Cozinha",
+      "reputation": 4.9,
+      "location": {
+        "country": "Brasil",
+        "state": "Paraná"
+      }
+    },
+    "createdAt": "2023-12-15T12:38:55Z",
+    "sales": 92,
+    "isActive": true
+  },
+  {
+    "id": "9",
+    "name": "Fone de Ouvido Bluetooth JBL",
+    "description": "Fone de ouvido sem fio JBL com Bluetooth 5.0, bateria de longa duração e cancelamento de ruído.",
+    "price": 289.90,
+    "images": [
+      "https://source.unsplash.com/random/800x600/?headphones",
+      "https://source.unsplash.com/random/800x600/?jbl",
+      "https://source.unsplash.com/random/800x600/?earphones"
+    ],
+    "category": "Eletrônicos",
+    "stock": 32,
+    "seller": {
+      "id": "s8",
+      "name": "AudioTek Colombia",
+      "reputation": 4.5,
+      "location": {
+        "country": "Colômbia",
+        "state": "Bogotá"
+      }
+    },
+    "createdAt": "2023-12-20T09:23:17Z",
+    "sales": 146,
+    "isActive": true
+  },
+  {
+    "id": "10",
+    "name": "Mochila Impermeável para Notebook",
+    "description": "Mochila impermeável com compartimento acolchoado para notebook de até 15.6 polegadas, vários bolsos e alças ergonômicas.",
+    "price": 159.90,
+    "images": [
+      "https://source.unsplash.com/random/800x600/?backpack",
+      "https://source.unsplash.com/random/800x600/?bag",
+      "https://source.unsplash.com/random/800x600/?laptop-bag"
+    ],
+    "category": "Acessórios",
+    "stock": 28,
+    "seller": {
+      "id": "s9",
+      "name": "Moda & Estilo Peru",
+      "reputation": 4.3,
+      "location": {
+        "country": "Peru",
+        "state": "Lima"
+      }
+    },
+    "createdAt": "2023-12-28T14:47:36Z",
+    "sales": 85,
+    "isActive": true
+  },
+  {
+    "id": "11",
+    "name": "Fritadeira Elétrica Sem Óleo",
+    "description": "Fritadeira elétrica sem óleo com capacidade de 4L, controle de temperatura ajustável e cesto removível.",
+    "price": 399.90,
+    "images": [
+      "https://source.unsplash.com/random/800x600/?airfryer",
+      "https://source.unsplash.com/random/800x600/?fryer",
+      "https://source.unsplash.com/random/800x600/?kitchen-appliance"
+    ],
+    "category": "Eletrodomésticos",
+    "stock": 15,
+    "seller": {
+      "id": "s7",
+      "name": "Casa & Cozinha",
+      "reputation": 4.9,
+      "location": {
+        "country": "Brasil",
+        "state": "Paraná"
+      }
+    },
+    "createdAt": "2024-01-05T11:09:28Z",
+    "sales": 127,
+    "isActive": true
+  },
+  {
+    "id": "12",
+    "name": "Console PlayStation 5",
+    "description": "Console PlayStation 5 com SSD de 825GB, controle DualSense, resolução 4K e taxa de quadros de até 120fps.",
+    "price": 4499.90,
+    "images": [
+      "https://source.unsplash.com/random/800x600/?playstation",
+      "https://source.unsplash.com/random/800x600/?ps5",
+      "https://source.unsplash.com/random/800x600/?console"
+    ],
+    "category": "Jogos",
+    "stock": 5,
+    "seller": {
+      "id": "s1",
+      "name": "Tech Brasil Store",
+      "reputation": 4.8,
+      "location": {
+        "country": "Brasil",
+        "state": "São Paulo"
+      }
+    },
+    "createdAt": "2024-01-10T16:53:02Z",
+    "sales": 58,
+    "isActive": true
+  }
+]
