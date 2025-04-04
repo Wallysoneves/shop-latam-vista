@@ -1,7 +1,7 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, Star } from 'lucide-react';
+import { MapPin, Star, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Product } from '../../types/Product';
 
 interface ProductCardProps {
@@ -9,6 +9,20 @@ interface ProductCardProps {
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const nextImage = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setCurrentImageIndex((prev) => (prev + 1) % product.images.length);
+  };
+
+  const prevImage = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setCurrentImageIndex((prev) => (prev - 1 + product.images.length) % product.images.length);
+  };
+
   return (
     <Link 
       to={`/product/${product.id}`} 
@@ -16,10 +30,37 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     >
       <div className="relative h-48 overflow-hidden">
         <img 
-          src={product.images[0]} 
+          src={product.images[currentImageIndex]} 
           alt={product.name} 
           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
         />
+        
+        {product.images.length > 1 && (
+          <>
+            <button 
+              onClick={prevImage}
+              className="absolute left-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-30 hover:bg-opacity-50 text-white p-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
+            >
+              <ChevronLeft size={16} />
+            </button>
+            <button 
+              onClick={nextImage}
+              className="absolute right-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-30 hover:bg-opacity-50 text-white p-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
+            >
+              <ChevronRight size={16} />
+            </button>
+            
+            <div className="absolute bottom-2 left-0 right-0 flex justify-center gap-1">
+              {product.images.map((_, index) => (
+                <div 
+                  key={index} 
+                  className={`w-1.5 h-1.5 rounded-full ${index === currentImageIndex ? 'bg-white' : 'bg-white bg-opacity-50'}`}
+                />
+              ))}
+            </div>
+          </>
+        )}
+        
         {product.stock < 5 && product.stock > 0 && (
           <div className="absolute top-2 right-2 bg-amber-500 text-white px-2 py-1 rounded text-xs font-semibold">
             Últimas unidades
