@@ -1,0 +1,429 @@
+{
+  "cepRanges": [
+    {
+      "range": ["00000000", "19999999"],
+      "region": "São Paulo",
+      "options": [
+        {
+          "name": "Econômico",
+          "price": 15.90,
+          "estimatedDays": 5,
+          "company": "Correios"
+        },
+        {
+          "name": "Expresso",
+          "price": 25.50,
+          "estimatedDays": 2,
+          "company": "Loggi"
+        },
+        {
+          "name": "Mesmo Dia",
+          "price": 49.90,
+          "estimatedDays": 0,
+          "company": "MPTW Express",
+          "availableCities": ["São Paulo", "Campinas", "Santos"]
+        }
+      ]
+    },
+    {
+      "range": ["20000000", "28999999"],
+      "region": "Rio de Janeiro",
+      "options": [
+        {
+          "name": "Econômico",
+          "price": 18.90,
+          "estimatedDays": 6,
+          "company": "Correios"
+        },
+        {
+          "name": "Expresso",
+          "price": 29.90,
+          "estimatedDays": 3,
+          "company": "Loggi"
+        },
+        {
+          "name": "Mesmo Dia",
+          "price": 54.90,
+          "estimatedDays": 0,
+          "company": "MPTW Express",
+          "availableCities": ["Rio de Janeiro", "Niterói"]
+        }
+      ]
+    },
+    {
+      "range": ["29000000", "39999999"],
+      "region": "Minas Gerais e Espírito Santo",
+      "options": [
+        {
+          "name": "Econômico",
+          "price": 21.90,
+          "estimatedDays": 7,
+          "company": "Correios"
+        },
+        {
+          "name": "Expresso",
+          "price": 33.90,
+          "estimatedDays": 4,
+          "company": "Loggi"
+        }
+      ]
+    },
+    {
+      "range": ["40000000", "49999999"],
+      "region": "Bahia e Sergipe",
+      "options": [
+        {
+          "name": "Econômico",
+          "price": 25.90,
+          "estimatedDays": 8,
+          "company": "Correios"
+        },
+        {
+          "name": "Expresso",
+          "price": 39.90,
+          "estimatedDays": 5,
+          "company": "Jadlog"
+        }
+      ]
+    },
+    {
+      "range": ["50000000", "56999999"],
+      "region": "Pernambuco",
+      "options": [
+        {
+          "name": "Econômico",
+          "price": 26.90,
+          "estimatedDays": 8,
+          "company": "Correios"
+        },
+        {
+          "name": "Expresso",
+          "price": 41.90,
+          "estimatedDays": 5,
+          "company": "Jadlog"
+        }
+      ]
+    },
+    {
+      "range": ["57000000", "57999999"],
+      "region": "Alagoas",
+      "options": [
+        {
+          "name": "Econômico",
+          "price": 26.90,
+          "estimatedDays": 8,
+          "company": "Correios"
+        },
+        {
+          "name": "Expresso",
+          "price": 41.90,
+          "estimatedDays": 5,
+          "company": "Jadlog"
+        }
+      ]
+    },
+    {
+      "range": ["58000000", "58999999"],
+      "region": "Paraíba",
+      "options": [
+        {
+          "name": "Econômico",
+          "price": 27.90,
+          "estimatedDays": 9,
+          "company": "Correios"
+        },
+        {
+          "name": "Expresso",
+          "price": 43.90,
+          "estimatedDays": 6,
+          "company": "Jadlog"
+        }
+      ]
+    },
+    {
+      "range": ["59000000", "59999999"],
+      "region": "Rio Grande do Norte",
+      "options": [
+        {
+          "name": "Econômico",
+          "price": 27.90,
+          "estimatedDays": 9,
+          "company": "Correios"
+        },
+        {
+          "name": "Expresso",
+          "price": 43.90,
+          "estimatedDays": 6,
+          "company": "Jadlog"
+        }
+      ]
+    },
+    {
+      "range": ["60000000", "63999999"],
+      "region": "Ceará",
+      "options": [
+        {
+          "name": "Econômico",
+          "price": 28.90,
+          "estimatedDays": 9,
+          "company": "Correios"
+        },
+        {
+          "name": "Expresso",
+          "price": 45.90,
+          "estimatedDays": 6,
+          "company": "Jadlog"
+        }
+      ]
+    },
+    {
+      "range": ["64000000", "65999999"],
+      "region": "Piauí",
+      "options": [
+        {
+          "name": "Econômico",
+          "price": 29.90,
+          "estimatedDays": 10,
+          "company": "Correios"
+        },
+        {
+          "name": "Expresso",
+          "price": 47.90,
+          "estimatedDays": 7,
+          "company": "Jadlog"
+        }
+      ]
+    },
+    {
+      "range": ["66000000", "68899999"],
+      "region": "Pará",
+      "options": [
+        {
+          "name": "Econômico",
+          "price": 31.90,
+          "estimatedDays": 11,
+          "company": "Correios"
+        },
+        {
+          "name": "Expresso",
+          "price": 52.90,
+          "estimatedDays": 8,
+          "company": "Jadlog"
+        }
+      ]
+    },
+    {
+      "range": ["68900000", "68999999"],
+      "region": "Amapá",
+      "options": [
+        {
+          "name": "Econômico",
+          "price": 34.90,
+          "estimatedDays": 12,
+          "company": "Correios"
+        },
+        {
+          "name": "Expresso",
+          "price": 58.90,
+          "estimatedDays": 9,
+          "company": "Jadlog"
+        }
+      ]
+    },
+    {
+      "range": ["69000000", "69999999"],
+      "region": "Amazonas",
+      "options": [
+        {
+          "name": "Econômico",
+          "price": 34.90,
+          "estimatedDays": 12,
+          "company": "Correios"
+        },
+        {
+          "name": "Expresso",
+          "price": 59.90,
+          "estimatedDays": 9,
+          "company": "Jadlog"
+        }
+      ]
+    },
+    {
+      "range": ["70000000", "73699999"],
+      "region": "Distrito Federal",
+      "options": [
+        {
+          "name": "Econômico",
+          "price": 22.90,
+          "estimatedDays": 7,
+          "company": "Correios"
+        },
+        {
+          "name": "Expresso",
+          "price": 34.90,
+          "estimatedDays": 4,
+          "company": "Loggi"
+        }
+      ]
+    },
+    {
+      "range": ["76800000", "76999999"],
+      "region": "Rondônia",
+      "options": [
+        {
+          "name": "Econômico",
+          "price": 32.90,
+          "estimatedDays": 12,
+          "company": "Correios"
+        },
+        {
+          "name": "Expresso",
+          "price": 56.90,
+          "estimatedDays": 9,
+          "company": "Jadlog"
+        }
+      ]
+    },
+    {
+      "range": ["77000000", "77999999"],
+      "region": "Tocantins",
+      "options": [
+        {
+          "name": "Econômico",
+          "price": 29.90,
+          "estimatedDays": 10,
+          "company": "Correios"
+        },
+        {
+          "name": "Expresso",
+          "price": 48.90,
+          "estimatedDays": 7,
+          "company": "Jadlog"
+        }
+      ]
+    },
+    {
+      "range": ["80000000", "87999999"],
+      "region": "Paraná",
+      "options": [
+        {
+          "name": "Econômico",
+          "price": 19.90,
+          "estimatedDays": 6,
+          "company": "Correios"
+        },
+        {
+          "name": "Expresso",
+          "price": 31.90,
+          "estimatedDays": 3,
+          "company": "Loggi"
+        }
+      ]
+    },
+    {
+      "range": ["88000000", "89999999"],
+      "region": "Santa Catarina",
+      "options": [
+        {
+          "name": "Econômico",
+          "price": 19.90,
+          "estimatedDays": 6,
+          "company": "Correios"
+        },
+        {
+          "name": "Expresso",
+          "price": 31.90,
+          "estimatedDays": 3,
+          "company": "Loggi"
+        }
+      ]
+    },
+    {
+      "range": ["90000000", "99999999"],
+      "region": "Rio Grande do Sul",
+      "options": [
+        {
+          "name": "Econômico",
+          "price": 21.90,
+          "estimatedDays": 7,
+          "company": "Correios"
+        },
+        {
+          "name": "Expresso",
+          "price": 32.90,
+          "estimatedDays": 4,
+          "company": "Loggi"
+        }
+      ]
+    }
+  ],
+  "weightMultipliers": [
+    {
+      "minWeight": 0,
+      "maxWeight": 0.5,
+      "multiplier": 1.0
+    },
+    {
+      "minWeight": 0.5,
+      "maxWeight": 2,
+      "multiplier": 1.3
+    },
+    {
+      "minWeight": 2,
+      "maxWeight": 5,
+      "multiplier": 1.7
+    },
+    {
+      "minWeight": 5,
+      "maxWeight": 10,
+      "multiplier": 2.2
+    },
+    {
+      "minWeight": 10,
+      "maxWeight": 20,
+      "multiplier": 3.0
+    },
+    {
+      "minWeight": 20,
+      "maxWeight": 30,
+      "multiplier": 4.0
+    },
+    {
+      "minWeight": 30,
+      "maxWeight": 50,
+      "multiplier": 5.5
+    }
+  ],
+  "valueDiscounts": [
+    {
+      "minValue": 0,
+      "maxValue": 99.99,
+      "discount": 0
+    },
+    {
+      "minValue": 100,
+      "maxValue": 199.99,
+      "discount": 5
+    },
+    {
+      "minValue": 200,
+      "maxValue": 499.99,
+      "discount": 10
+    },
+    {
+      "minValue": 500,
+      "maxValue": 999.99,
+      "discount": 15
+    },
+    {
+      "minValue": 1000,
+      "maxValue": 4999.99,
+      "discount": 25
+    },
+    {
+      "minValue": 5000,
+      "maxValue": 99999999,
+      "discount": 100
+    }
+  ]
+} 

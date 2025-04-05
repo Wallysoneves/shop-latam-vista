@@ -1,4 +1,3 @@
-
 export interface Seller {
   id: string;
   name: string;
@@ -21,4 +20,6 @@ export interface Product {
   createdAt: string;
   sales: number;
   isActive?: boolean;
+  brand?: string;
+  sku?: string;
 }

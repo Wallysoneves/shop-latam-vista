@@ -1,0 +1,363 @@
+[
+  {
+    "id": "ord1",
+    "customerId": "cust1",
+    "items": [
+      {
+        "product": {
+          "id": "prod1",
+          "name": "Smartphone Galaxy S23",
+          "description": "Smartphone Samsung Galaxy S23 com 256GB de armazenamento",
+          "price": 4999.99,
+          "images": ["https://example.com/imgs/galaxy-s23-1.jpg"],
+          "category": "Eletrônicos",
+          "stock": 25,
+          "seller": {
+            "id": "seller1",
+            "name": "Tech Store",
+            "reputation": 4.8,
+            "location": {
+              "country": "Brasil",
+              "state": "SP"
+            }
+          },
+          "createdAt": "2023-01-15T08:30:00.000Z",
+          "sales": 42
+        },
+        "quantity": 1
+      },
+      {
+        "product": {
+          "id": "prod4",
+          "name": "Fone de Ouvido Bluetooth JBL",
+          "description": "Fone de ouvido JBL com Bluetooth 5.0",
+          "price": 399.99,
+          "images": ["https://example.com/imgs/jbl-headphone-1.jpg"],
+          "category": "Acessórios",
+          "stock": 50,
+          "seller": {
+            "id": "seller1",
+            "name": "Tech Store",
+            "reputation": 4.8,
+            "location": {
+              "country": "Brasil",
+              "state": "SP"
+            }
+          },
+          "createdAt": "2023-03-10T15:30:00.000Z",
+          "sales": 87
+        },
+        "quantity": 2
+      }
+    ],
+    "status": "delivered",
+    "createdAt": "2023-06-10T14:30:00.000Z",
+    "updatedAt": "2023-06-15T10:15:00.000Z",
+    "total": 5799.97,
+    "shipping": 15.00,
+    "shippingInfo": {
+      "fullName": "João Silva",
+      "email": "joao.silva@email.com",
+      "phone": "(11) 98765-4321",
+      "address": "Rua das Flores, 123",
+      "city": "São Paulo",
+      "state": "SP",
+      "zipCode": "01234-567",
+      "country": "Brasil"
+    },
+    "sellerId": "seller1"
+  },
+  {
+    "id": "ord2",
+    "customerId": "cust2",
+    "items": [
+      {
+        "product": {
+          "id": "prod2",
+          "name": "Notebook Dell Inspiron",
+          "description": "Notebook Dell Inspiron com processador Intel Core i7",
+          "price": 5499.99,
+          "images": ["https://example.com/imgs/dell-inspiron-1.jpg"],
+          "category": "Eletrônicos",
+          "stock": 12,
+          "seller": {
+            "id": "seller1",
+            "name": "Tech Store",
+            "reputation": 4.8,
+            "location": {
+              "country": "Brasil",
+              "state": "SP"
+            }
+          },
+          "createdAt": "2023-02-05T14:45:00.000Z",
+          "sales": 18
+        },
+        "quantity": 1
+      }
+    ],
+    "status": "processing",
+    "createdAt": "2023-07-05T09:20:00.000Z",
+    "updatedAt": "2023-07-05T14:10:00.000Z",
+    "total": 5499.99,
+    "shipping": 25.00,
+    "shippingInfo": {
+      "fullName": "Maria Oliveira",
+      "email": "maria.oliveira@email.com",
+      "phone": "(21) 98765-4321",
+      "address": "Av. Atlântica, 500",
+      "city": "Rio de Janeiro",
+      "state": "RJ",
+      "zipCode": "22000-123",
+      "country": "Brasil"
+    },
+    "sellerId": "seller1"
+  },
+  {
+    "id": "ord3",
+    "customerId": "cust3",
+    "items": [
+      {
+        "product": {
+          "id": "prod3",
+          "name": "Smart TV LG 55 polegadas",
+          "description": "Smart TV LG 55 polegadas 4K UHD",
+          "price": 3299.99,
+          "images": ["https://example.com/imgs/lg-tv-1.jpg"],
+          "category": "Eletrônicos",
+          "stock": 8,
+          "seller": {
+            "id": "seller1",
+            "name": "Tech Store",
+            "reputation": 4.8,
+            "location": {
+              "country": "Brasil",
+              "state": "SP"
+            }
+          },
+          "createdAt": "2023-02-15T10:20:00.000Z",
+          "sales": 15
+        },
+        "quantity": 1
+      },
+      {
+        "product": {
+          "id": "prod6",
+          "name": "Teclado Mecânico Gamer",
+          "description": "Teclado mecânico RGB para gamers",
+          "price": 449.99,
+          "images": ["https://example.com/imgs/keyboard-1.jpg"],
+          "category": "Periféricos",
+          "stock": 30,
+          "seller": {
+            "id": "seller1",
+            "name": "Tech Store",
+            "reputation": 4.8,
+            "location": {
+              "country": "Brasil",
+              "state": "SP"
+            }
+          },
+          "createdAt": "2023-04-05T09:15:00.000Z",
+          "sales": 56
+        },
+        "quantity": 1
+      }
+    ],
+    "status": "shipped",
+    "createdAt": "2023-08-15T16:45:00.000Z",
+    "updatedAt": "2023-08-16T11:30:00.000Z",
+    "total": 3749.98,
+    "shipping": 18.50,
+    "shippingInfo": {
+      "fullName": "Pedro Santos",
+      "email": "pedro.santos@email.com",
+      "phone": "(31) 98765-4321",
+      "address": "Rua da Serra, 789",
+      "city": "Belo Horizonte",
+      "state": "MG",
+      "zipCode": "30000-789",
+      "country": "Brasil"
+    },
+    "sellerId": "seller1"
+  },
+  {
+    "id": "ord4",
+    "customerId": "cust4",
+    "items": [
+      {
+        "product": {
+          "id": "prod5",
+          "name": "Impressora HP LaserJet",
+          "description": "Impressora multifuncional HP LaserJet",
+          "price": 1899.99,
+          "images": ["https://example.com/imgs/hp-printer-1.jpg"],
+          "category": "Eletrônicos",
+          "stock": 15,
+          "seller": {
+            "id": "seller1",
+            "name": "Tech Store",
+            "reputation": 4.8,
+            "location": {
+              "country": "Brasil",
+              "state": "SP"
+            }
+          },
+          "createdAt": "2023-03-22T11:45:00.000Z",
+          "sales": 9
+        },
+        "quantity": 1
+      }
+    ],
+    "status": "pending",
+    "createdAt": "2023-09-20T10:15:00.000Z",
+    "updatedAt": "2023-09-20T10:15:00.000Z",
+    "total": 1899.99,
+    "shipping": 12.00,
+    "shippingInfo": {
+      "fullName": "Ana Costa",
+      "email": "ana.costa@email.com",
+      "phone": "(51) 98765-4321",
+      "address": "Rua dos Andradas, 456",
+      "city": "Porto Alegre",
+      "state": "RS",
+      "zipCode": "90000-456",
+      "country": "Brasil"
+    },
+    "sellerId": "seller1"
+  },
+  {
+    "id": "ord5",
+    "customerId": "cust5",
+    "items": [
+      {
+        "product": {
+          "id": "prod7",
+          "name": "Câmera DSLR Canon",
+          "description": "Câmera DSLR Canon EOS Rebel T7",
+          "price": 2899.99,
+          "images": ["https://example.com/imgs/canon-t7-1.jpg"],
+          "category": "Fotografia",
+          "stock": 10,
+          "seller": {
+            "id": "seller2",
+            "name": "PhotoPro",
+            "reputation": 4.7,
+            "location": {
+              "country": "Brasil",
+              "state": "RJ"
+            }
+          },
+          "createdAt": "2023-04-18T16:20:00.000Z",
+          "sales": 12
+        },
+        "quantity": 1
+      }
+    ],
+    "status": "canceled",
+    "createdAt": "2023-08-25T14:30:00.000Z",
+    "updatedAt": "2023-08-26T09:45:00.000Z",
+    "total": 2899.99,
+    "shipping": 20.00,
+    "shippingInfo": {
+      "fullName": "Lucas Ferreira",
+      "email": "lucas.ferreira@email.com",
+      "phone": "(41) 98765-4321",
+      "address": "Rua das Araucárias, 234",
+      "city": "Curitiba",
+      "state": "PR",
+      "zipCode": "80000-234",
+      "country": "Brasil"
+    },
+    "sellerId": "seller2"
+  },
+  {
+    "id": "ord6",
+    "customerId": "cust1",
+    "items": [
+      {
+        "product": {
+          "id": "prod8",
+          "name": "Cadeira Gamer",
+          "description": "Cadeira gamer ergonômica",
+          "price": 1299.99,
+          "images": ["https://example.com/imgs/gamer-chair-1.jpg"],
+          "category": "Móveis",
+          "stock": 18,
+          "seller": {
+            "id": "seller1",
+            "name": "Tech Store",
+            "reputation": 4.8,
+            "location": {
+              "country": "Brasil",
+              "state": "SP"
+            }
+          },
+          "createdAt": "2023-05-03T13:40:00.000Z",
+          "sales": 24
+        },
+        "quantity": 1
+      }
+    ],
+    "status": "delivered",
+    "createdAt": "2023-07-18T11:25:00.000Z",
+    "updatedAt": "2023-07-25T16:40:00.000Z",
+    "total": 1299.99,
+    "shipping": 35.00,
+    "shippingInfo": {
+      "fullName": "João Silva",
+      "email": "joao.silva@email.com",
+      "phone": "(11) 98765-4321",
+      "address": "Rua das Flores, 123",
+      "city": "São Paulo",
+      "state": "SP",
+      "zipCode": "01234-567",
+      "country": "Brasil"
+    },
+    "sellerId": "seller1"
+  },
+  {
+    "id": "ord7",
+    "customerId": "cust2",
+    "items": [
+      {
+        "product": {
+          "id": "prod1",
+          "name": "Smartphone Galaxy S23",
+          "description": "Smartphone Samsung Galaxy S23 com 256GB de armazenamento",
+          "price": 4999.99,
+          "images": ["https://example.com/imgs/galaxy-s23-1.jpg"],
+          "category": "Eletrônicos",
+          "stock": 25,
+          "seller": {
+            "id": "seller1",
+            "name": "Tech Store",
+            "reputation": 4.8,
+            "location": {
+              "country": "Brasil",
+              "state": "SP"
+            }
+          },
+          "createdAt": "2023-01-15T08:30:00.000Z",
+          "sales": 42
+        },
+        "quantity": 1
+      }
+    ],
+    "status": "processing",
+    "createdAt": "2023-09-05T09:15:00.000Z",
+    "updatedAt": "2023-09-05T14:30:00.000Z",
+    "total": 4999.99,
+    "shipping": 15.00,
+    "shippingInfo": {
+      "fullName": "Maria Oliveira",
+      "email": "maria.oliveira@email.com",
+      "phone": "(21) 98765-4321",
+      "address": "Av. Atlântica, 500",
+      "city": "Rio de Janeiro",
+      "state": "RJ",
+      "zipCode": "22000-123",
+      "country": "Brasil"
+    },
+    "sellerId": "seller1"
+  }
+] 

@@ -1,9 +1,6 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
-import { useProducts } from '../../contexts/ProductContext';
-import { useOrders } from '../../contexts/OrderContext';
 import { 
   BarChart, 
   Bar, 
@@ -27,11 +24,10 @@ import {
 } from 'lucide-react';
 
 import SellerLayout from './SellerLayout';
+import { sellerService } from '../../services/sellerService';
 
 const SellerDashboard = () => {
   const { user } = useAuth();
-  const { products, getProductsBySeller } = useProducts();
-  const { orders, getOrdersBySeller } = useOrders();
   
   const [sellerProducts, setSellerProducts] = useState<any[]>([]);
   const [sellerOrders, setSellerOrders] = useState<any[]>([]);
@@ -65,60 +61,69 @@ const SellerDashboard = () => {
   });
   
   const [categoryData, setCategoryData] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
   
   useEffect(() => {
     if (user) {
-      // Get seller products
-      const sellerProds = getProductsBySeller(user.id);
-      setSellerProducts(sellerProds);
-      
-      // Get seller orders
-      const sellerOrds = getOrdersBySeller(user.id);
-      setSellerOrders(sellerOrds);
-      
-      // Calculate product stats
-      setProductStats({
-        total: sellerProds.length,
-        active: sellerProds.filter(p => p.isActive !== false).length,
-        lowStock: sellerProds.filter(p => p.stock > 0 && p.stock <= 5).length,
-        outOfStock: sellerProds.filter(p => p.stock === 0).length
-      });
-      
-      // Calculate sales stats
-      const totalSales = sellerProds.reduce((sum, p) => sum + p.sales, 0);
-      setSalesStats({
-        pending: sellerOrds.filter(o => o.status === 'pending').length,
-        processing: sellerOrds.filter(o => o.status === 'processing').length,
-        shipped: sellerOrds.filter(o => o.status === 'shipped').length,
-        delivered: sellerOrds.filter(o => o.status === 'delivered').length,
-        canceled: sellerOrds.filter(o => o.status === 'canceled').length,
-        total: totalSales
-      });
-      
-      // Prepare chart data
-      // Monthly sales data (mock data)
-      const monthNames = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
-      const mockSalesData = monthNames.map(month => ({
-        name: month,
-        vendas: Math.floor(Math.random() * 100)
-      }));
-      setSalesData(mockSalesData);
-      
-      // Category data
-      const categories = sellerProds.reduce((acc: Record<string, number>, product) => {
-        const { category } = product;
-        acc[category] = (acc[category] || 0) + product.sales;
-        return acc;
-      }, {});
-      
-      const categoryChartData = Object.entries(categories).map(([name, value]) => ({
-        name,
-        value
-      }));
-      
-      setCategoryData(categoryChartData);
+      try {
+        // Get seller products using sellerService
+        const sellerProds = sellerService.getSellerProducts(user.id);
+        setSellerProducts(sellerProds);
+        
+        // Get seller orders using sellerService
+        const sellerOrds = sellerService.getSellerOrders(user.id);
+        setSellerOrders(sellerOrds);
+        
+        // Calculate product stats
+        setProductStats({
+          total: sellerProds.length,
+          active: sellerProds.filter(p => p.isActive !== false).length,
+          lowStock: sellerProds.filter(p => p.stock > 0 && p.stock <= 5).length,
+          outOfStock: sellerProds.filter(p => p.stock === 0).length
+        });
+        
+        // Get order stats from service
+        const orderCounts = sellerService.getSellerOrdersByStatus(user.id);
+        const totalSales = sellerService.getSellerTotalSales(user.id);
+        
+        setSalesStats({
+          pending: orderCounts.pending,
+          processing: orderCounts.processing,
+          shipped: orderCounts.shipped,
+          delivered: orderCounts.delivered,
+          canceled: orderCounts.canceled,
+          total: sellerProds.reduce((sum, p) => sum + (p.sales || 0), 0)
+        });
+        
+        // Prepare chart data
+        // Monthly sales data (mock data)
+        const monthNames = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
+        const mockSalesData = monthNames.map(month => ({
+          name: month,
+          vendas: Math.floor(Math.random() * 100)
+        }));
+        setSalesData(mockSalesData);
+        
+        // Category data
+        const categories = sellerProds.reduce((acc: Record<string, number>, product) => {
+          const { category } = product;
+          acc[category] = (acc[category] || 0) + (product.sales || 0);
+          return acc;
+        }, {});
+        
+        const categoryChartData = Object.entries(categories).map(([name, value]) => ({
+          name,
+          value
+        }));
+        
+        setCategoryData(categoryChartData);
+      } catch (error) {
+        console.error('Erro ao carregar dados do painel:', error);
+      } finally {
+        setLoading(false);
+      }
     }
-  }, [user, products, orders, getProductsBySeller, getOrdersBySeller]);
+  }, [user]);
   
   const COLORS = ['#FFC844', '#5AA5E0', '#4CAF50', '#FF9800', '#9C27B0', '#E91E63'];
   

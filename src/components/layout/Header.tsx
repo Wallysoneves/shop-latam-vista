@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { ShoppingCart, User, Search, Menu, X } from 'lucide-react';
@@ -29,8 +28,8 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <span className="text-2xl font-bold text-market-yellow">Latin</span>
-            <span className="text-2xl font-bold text-market-blue">Vista</span>
+            <span className="text-2xl font-bold text-market-yellow">MPTW</span>
+            <span className="text-2xl font-bold text-market-blue">Solutions</span>
           </Link>
 
           {/* Search Bar - Hide on mobile */}

@@ -1,315 +1,302 @@
-
 [
   {
-    "id": "1",
+    "id": "prod1",
     "name": "Smartphone Galaxy S23",
-    "description": "Smartphone Samsung Galaxy S23 com 128GB de armazenamento, 8GB de RAM, câmera tripla de 50MP e tela AMOLED de 6.1 polegadas.",
-    "price": 3799.99,
-    "images": [
-      "https://laticiniosbomdestino.com.br/2016/wp-content/uploads/2023/07/creme-de-leite-de-bufala-a2a2-bom-destino-0.jpg",
-      "https://source.unsplash.com/random/800x600/?smartphone",
-      "https://source.unsplash.com/random/800x600/?cellphone",
-      "https://source.unsplash.com/random/800x600/?samsung"
-    ],
-    "category": "Eletrônicos",
+    "description": "Smartphone Samsung Galaxy S23 com 256GB de armazenamento, 8GB RAM, câmera tripla de 64MP, tela AMOLED de 6.5 polegadas.",
+    "price": 4999.99,
     "stock": 25,
-    "seller": {
-      "id": "s1",
-      "name": "Tech Brasil Store",
-      "reputation": 4.8,
-      "location": {
-        "country": "Brasil",
-        "state": "São Paulo"
-      }
+    "category": "Eletrônicos",
+    "images": [
+      "https://example.com/imgs/galaxy-s23-1.jpg",
+      "https://example.com/imgs/galaxy-s23-2.jpg"
+    ],
+    "discount": 0,
+    "weight": 0.2,
+    "dimensions": {
+      "height": 15.6,
+      "width": 7.5,
+      "depth": 0.8
     },
-    "createdAt": "2023-10-15T14:22:11Z",
-    "sales": 152,
-    "isActive": true
+    "sellerId": "seller1",
+    "brand": "Samsung",
+    "sku": "SAMGS23-256-BLK",
+    "sales": 42,
+    "createdAt": "2023-01-15T08:30:00.000Z",
+    "updatedAt": "2023-01-15T08:30:00.000Z"
   },
   {
-    "id": "2",
+    "id": "prod2",
     "name": "Notebook Dell Inspiron",
-    "description": "Notebook Dell Inspiron com processador Intel Core i5, 8GB de RAM, SSD de 256GB e tela Full HD de 15.6 polegadas.",
-    "price": 4299.90,
-    "images": [
-      "https://laticiniosbomdestino.com.br/2016/wp-content/uploads/2023/07/creme-de-leite-de-bufala-a2a2-bom-destino-0.jpg",
-      "https://source.unsplash.com/random/800x600/?laptop",
-      "https://source.unsplash.com/random/800x600/?notebook",
-      "https://source.unsplash.com/random/800x600/?dell"
-    ],
-    "category": "Eletrônicos",
+    "description": "Notebook Dell Inspiron com processador Intel Core i7, 16GB RAM, SSD 512GB, placa de vídeo dedicada NVIDIA GeForce GTX 1650.",
+    "price": 5499.99,
     "stock": 12,
-    "seller": {
-      "id": "s2",
-      "name": "Informática Prime",
-      "reputation": 4.6,
-      "location": {
-        "country": "Brasil",
-        "state": "Rio de Janeiro"
-      }
-    },
-    "createdAt": "2023-10-20T09:45:33Z",
-    "sales": 87,
-    "isActive": true
-  },
-  {
-    "id": "3",
-    "name": "Tênis Nike Air Max",
-    "description": "Tênis Nike Air Max para corrida, com tecnologia de amortecimento de impacto, malha respirável e solado de borracha.",
-    "price": 549.90,
-    "images": [
-      "https://laticiniosbomdestino.com.br/2016/wp-content/uploads/2023/07/creme-de-leite-de-bufala-a2a2-bom-destino-0.jpg",
-      "https://source.unsplash.com/random/800x600/?shoes",
-      "https://source.unsplash.com/random/800x600/?nike",
-      "https://source.unsplash.com/random/800x600/?sneakers"
-    ],
-    "category": "Calçados",
-    "stock": 35,
-    "seller": {
-      "id": "s3",
-      "name": "Esporte Total",
-      "reputation": 4.9,
-      "location": {
-        "country": "Brasil",
-        "state": "Bahia"
-      }
-    },
-    "createdAt": "2023-11-05T16:08:45Z",
-    "sales": 214,
-    "isActive": true
-  },
-  {
-    "id": "4",
-    "name": "Smart TV LG 50 polegadas",
-    "description": "Smart TV LG de 50 polegadas com resolução 4K, sistema webOS, HDR e conectividade Wi-Fi.",
-    "price": 2799.90,
-    "images": [
-      "https://laticiniosbomdestino.com.br/2016/wp-content/uploads/2023/07/creme-de-leite-de-bufala-a2a2-bom-destino-0.jpg",
-      "https://source.unsplash.com/random/800x600/?tv",
-      "https://source.unsplash.com/random/800x600/?smarttv",
-      "https://source.unsplash.com/random/800x600/?television"
-    ],
     "category": "Eletrônicos",
+    "images": [
+      "https://example.com/imgs/dell-inspiron-1.jpg",
+      "https://example.com/imgs/dell-inspiron-2.jpg"
+    ],
+    "discount": 10,
+    "weight": 2.1,
+    "dimensions": {
+      "height": 35.8,
+      "width": 24.2,
+      "depth": 1.9
+    },
+    "sellerId": "seller1",
+    "brand": "Dell",
+    "sku": "DELI7-16-512",
+    "sales": 18,
+    "createdAt": "2023-02-05T14:45:00.000Z",
+    "updatedAt": "2023-02-05T14:45:00.000Z"
+  },
+  {
+    "id": "prod3",
+    "name": "Smart TV LG 55 polegadas",
+    "description": "Smart TV LG 55 polegadas 4K UHD, HDR, WebOS, WiFi, Bluetooth, com controle remoto inteligente.",
+    "price": 3299.99,
     "stock": 8,
-    "seller": {
-      "id": "s4",
-      "name": "Mega Eletrônicos",
-      "reputation": 4.5,
-      "location": {
-        "country": "Brasil",
-        "state": "Minas Gerais"
-      }
-    },
-    "createdAt": "2023-11-12T11:32:18Z",
-    "sales": 64,
-    "isActive": true
-  },
-  {
-    "id": "5",
-    "name": "Cafeteira Expresso Nespresso",
-    "description": "Cafeteira Expresso Nespresso com sistema de cápsulas, reservatório de água de 0.7L e bandeja coletora removível.",
-    "price": 799.90,
-    "images": [
-      "https://laticiniosbomdestino.com.br/2016/wp-content/uploads/2023/07/creme-de-leite-de-bufala-a2a2-bom-destino-0.jpg",
-      "https://source.unsplash.com/random/800x600/?coffeemachine",
-      "https://source.unsplash.com/random/800x600/?nespresso",
-      "https://source.unsplash.com/random/800x600/?coffee"
-    ],
-    "category": "Eletrodomésticos",
-    "stock": 22,
-    "seller": {
-      "id": "s2",
-      "name": "Informática Prime",
-      "reputation": 4.6,
-      "location": {
-        "country": "Brasil",
-        "state": "Rio de Janeiro"
-      }
-    },
-    "createdAt": "2023-11-18T08:14:59Z",
-    "sales": 118,
-    "isActive": true
-  },
-  {
-    "id": "6",
-    "name": "Relógio Inteligente Smartwatch",
-    "description": "Relógio inteligente com monitoramento cardíaco, contagem de passos, notificações e bateria de longa duração.",
-    "price": 299.90,
-    "images": [
-      "https://laticiniosbomdestino.com.br/2016/wp-content/uploads/2023/07/creme-de-leite-de-bufala-a2a2-bom-destino-0.jpg",
-      "https://source.unsplash.com/random/800x600/?smartwatch",
-      "https://source.unsplash.com/random/800x600/?watch",
-      "https://source.unsplash.com/random/800x600/?wearable"
-    ],
-    "category": "Acessórios",
-    "stock": 45,
-    "seller": {
-      "id": "s5",
-      "name": "Tech Store Chile",
-      "reputation": 4.7,
-      "location": {
-        "country": "Chile",
-        "state": "Santiago"
-      }
-    },
-    "createdAt": "2023-12-02T15:27:31Z",
-    "sales": 173,
-    "isActive": true
-  },
-  {
-    "id": "7",
-    "name": "Camiseta Adidas Algodão",
-    "description": "Camiseta Adidas confeccionada em algodão de alta qualidade, confortável e durável, ideal para atividades físicas.",
-    "price": 119.90,
-    "images": [
-      "https://laticiniosbomdestino.com.br/2016/wp-content/uploads/2023/07/creme-de-leite-de-bufala-a2a2-bom-destino-0.jpg",
-      "https://source.unsplash.com/random/800x600/?tshirt",
-      "https://source.unsplash.com/random/800x600/?adidas",
-      "https://source.unsplash.com/random/800x600/?sportswear"
-    ],
-    "category": "Vestuário",
-    "stock": 60,
-    "seller": {
-      "id": "s6",
-      "name": "Deportes Argentina",
-      "reputation": 4.4,
-      "location": {
-        "country": "Argentina",
-        "state": "Buenos Aires"
-      }
-    },
-    "createdAt": "2023-12-10T10:51:42Z",
-    "sales": 205,
-    "isActive": true
-  },
-  {
-    "id": "8",
-    "name": "Panela Elétrica Multifuncional",
-    "description": "Panela elétrica multifuncional 10 em 1, com funções de pressão, lenta, arroz, vapor, e muito mais.",
-    "price": 499.90,
-    "images": [
-      "https://laticiniosbomdestino.com.br/2016/wp-content/uploads/2023/07/creme-de-leite-de-bufala-a2a2-bom-destino-0.jpg",
-      "https://source.unsplash.com/random/800x600/?cooker",
-      "https://source.unsplash.com/random/800x600/?instapot",
-      "https://source.unsplash.com/random/800x600/?kitchen"
-    ],
-    "category": "Eletrodomésticos",
-    "stock": 18,
-    "seller": {
-      "id": "s7",
-      "name": "Casa & Cozinha",
-      "reputation": 4.9,
-      "location": {
-        "country": "Brasil",
-        "state": "Paraná"
-      }
-    },
-    "createdAt": "2023-12-15T12:38:55Z",
-    "sales": 92,
-    "isActive": true
-  },
-  {
-    "id": "9",
-    "name": "Fone de Ouvido Bluetooth JBL",
-    "description": "Fone de ouvido sem fio JBL com Bluetooth 5.0, bateria de longa duração e cancelamento de ruído.",
-    "price": 289.90,
-    "images": [
-      "https://laticiniosbomdestino.com.br/2016/wp-content/uploads/2023/07/creme-de-leite-de-bufala-a2a2-bom-destino-0.jpg",
-      "https://source.unsplash.com/random/800x600/?headphones",
-      "https://source.unsplash.com/random/800x600/?jbl",
-      "https://source.unsplash.com/random/800x600/?earphones"
-    ],
     "category": "Eletrônicos",
-    "stock": 32,
-    "seller": {
-      "id": "s8",
-      "name": "AudioTek Colombia",
-      "reputation": 4.5,
-      "location": {
-        "country": "Colômbia",
-        "state": "Bogotá"
-      }
+    "images": [
+      "https://example.com/imgs/lg-tv-1.jpg",
+      "https://example.com/imgs/lg-tv-2.jpg"
+    ],
+    "discount": 5,
+    "weight": 16.8,
+    "dimensions": {
+      "height": 72.3,
+      "width": 124.5,
+      "depth": 5.8
     },
-    "createdAt": "2023-12-20T09:23:17Z",
-    "sales": 146,
-    "isActive": true
+    "sellerId": "seller1",
+    "brand": "LG",
+    "sku": "LG-TV-55-4K",
+    "sales": 15,
+    "createdAt": "2023-02-15T10:20:00.000Z",
+    "updatedAt": "2023-02-15T10:20:00.000Z"
   },
   {
-    "id": "10",
-    "name": "Mochila Impermeável para Notebook",
-    "description": "Mochila impermeável com compartimento acolchoado para notebook de até 15.6 polegadas, vários bolsos e alças ergonômicas.",
-    "price": 159.90,
-    "images": [
-      "https://laticiniosbomdestino.com.br/2016/wp-content/uploads/2023/07/creme-de-leite-de-bufala-a2a2-bom-destino-0.jpg",
-      "https://source.unsplash.com/random/800x600/?backpack",
-      "https://source.unsplash.com/random/800x600/?bag",
-      "https://source.unsplash.com/random/800x600/?laptop-bag"
-    ],
+    "id": "prod4",
+    "name": "Fone de Ouvido Bluetooth JBL",
+    "description": "Fone de ouvido JBL com Bluetooth 5.0, cancelamento de ruído, bateria de longa duração, resistente à água.",
+    "price": 399.99,
+    "stock": 50,
     "category": "Acessórios",
-    "stock": 28,
-    "seller": {
-      "id": "s9",
-      "name": "Moda & Estilo Peru",
-      "reputation": 4.3,
-      "location": {
-        "country": "Peru",
-        "state": "Lima"
-      }
+    "images": [
+      "https://example.com/imgs/jbl-headphone-1.jpg",
+      "https://example.com/imgs/jbl-headphone-2.jpg"
+    ],
+    "discount": 0,
+    "weight": 0.3,
+    "dimensions": {
+      "height": 18.5,
+      "width": 8.2,
+      "depth": 4.7
     },
-    "createdAt": "2023-12-28T14:47:36Z",
-    "sales": 85,
-    "isActive": true
+    "sellerId": "seller1",
+    "brand": "JBL",
+    "sku": "JBL-HP-BT-BLK",
+    "sales": 87,
+    "createdAt": "2023-03-10T15:30:00.000Z",
+    "updatedAt": "2023-03-10T15:30:00.000Z"
   },
   {
-    "id": "11",
-    "name": "Fritadeira Elétrica Sem Óleo",
-    "description": "Fritadeira elétrica sem óleo com capacidade de 4L, controle de temperatura ajustável e cesto removível.",
-    "price": 399.90,
-    "images": [
-      "https://laticiniosbomdestino.com.br/2016/wp-content/uploads/2023/07/creme-de-leite-de-bufala-a2a2-bom-destino-0.jpg",
-      "https://source.unsplash.com/random/800x600/?airfryer",
-      "https://source.unsplash.com/random/800x600/?fryer",
-      "https://source.unsplash.com/random/800x600/?kitchen-appliance"
-    ],
-    "category": "Eletrodomésticos",
+    "id": "prod5",
+    "name": "Impressora HP LaserJet",
+    "description": "Impressora multifuncional HP LaserJet, impressão colorida, scanner, cópia, WiFi, compatível com AirPrint e Google Cloud Print.",
+    "price": 1899.99,
     "stock": 15,
-    "seller": {
-      "id": "s7",
-      "name": "Casa & Cozinha",
-      "reputation": 4.9,
-      "location": {
-        "country": "Brasil",
-        "state": "Paraná"
-      }
+    "category": "Eletrônicos",
+    "images": [
+      "https://example.com/imgs/hp-printer-1.jpg",
+      "https://example.com/imgs/hp-printer-2.jpg"
+    ],
+    "discount": 15,
+    "weight": 8.5,
+    "dimensions": {
+      "height": 40.2,
+      "width": 37.0,
+      "depth": 32.3
     },
-    "createdAt": "2024-01-05T11:09:28Z",
-    "sales": 127,
-    "isActive": true
+    "sellerId": "seller1",
+    "brand": "HP",
+    "sku": "HP-LJ-MF-CLR",
+    "sales": 9,
+    "createdAt": "2023-03-22T11:45:00.000Z",
+    "updatedAt": "2023-03-22T11:45:00.000Z"
   },
   {
-    "id": "12",
-    "name": "Console PlayStation 5",
-    "description": "Console PlayStation 5 com SSD de 825GB, controle DualSense, resolução 4K e taxa de quadros de até 120fps.",
-    "price": 4499.90,
+    "id": "prod6",
+    "name": "Teclado Mecânico Gamer",
+    "description": "Teclado mecânico RGB para gamers, switches Cherry MX Blue, anti-ghosting, teclas programáveis.",
+    "price": 449.99,
+    "stock": 30,
+    "category": "Periféricos",
     "images": [
-      "https://laticiniosbomdestino.com.br/2016/wp-content/uploads/2023/07/creme-de-leite-de-bufala-a2a2-bom-destino-0.jpg",
-      "https://source.unsplash.com/random/800x600/?playstation",
-      "https://source.unsplash.com/random/800x600/?ps5",
-      "https://source.unsplash.com/random/800x600/?console"
+      "https://example.com/imgs/keyboard-1.jpg",
+      "https://example.com/imgs/keyboard-2.jpg"
     ],
-    "category": "Jogos",
-    "stock": 5,
-    "seller": {
-      "id": "s1",
-      "name": "Tech Brasil Store",
-      "reputation": 4.8,
-      "location": {
-        "country": "Brasil",
-        "state": "São Paulo"
-      }
+    "discount": 0,
+    "weight": 1.2,
+    "dimensions": {
+      "height": 3.8,
+      "width": 44.5,
+      "depth": 14.2
     },
-    "createdAt": "2024-01-10T16:53:02Z",
-    "sales": 58,
-    "isActive": true
+    "sellerId": "seller1",
+    "brand": "HyperX",
+    "sku": "HX-KB-MEC-RGB",
+    "sales": 56,
+    "createdAt": "2023-04-05T09:15:00.000Z",
+    "updatedAt": "2023-04-05T09:15:00.000Z"
+  },
+  {
+    "id": "prod7",
+    "name": "Câmera DSLR Canon",
+    "description": "Câmera DSLR Canon EOS Rebel T7 com lente 18-55mm, sensor CMOS de 24.1MP, vídeo Full HD.",
+    "price": 2899.99,
+    "stock": 10,
+    "category": "Fotografia",
+    "images": [
+      "https://example.com/imgs/canon-t7-1.jpg",
+      "https://example.com/imgs/canon-t7-2.jpg"
+    ],
+    "discount": 8,
+    "weight": 1.75,
+    "dimensions": {
+      "height": 10.4,
+      "width": 12.9,
+      "depth": 7.8
+    },
+    "sellerId": "seller2",
+    "brand": "Canon",
+    "sku": "CAN-REBEL-T7",
+    "sales": 12,
+    "createdAt": "2023-04-18T16:20:00.000Z",
+    "updatedAt": "2023-04-18T16:20:00.000Z"
+  },
+  {
+    "id": "prod8",
+    "name": "Cadeira Gamer",
+    "description": "Cadeira gamer ergonômica, reclinável até 180°, apoio para braços ajustáveis, suporta até 150kg.",
+    "price": 1299.99,
+    "stock": 18,
+    "category": "Móveis",
+    "images": [
+      "https://example.com/imgs/gamer-chair-1.jpg",
+      "https://example.com/imgs/gamer-chair-2.jpg"
+    ],
+    "discount": 12,
+    "weight": 22.5,
+    "dimensions": {
+      "height": 130.0,
+      "width": 65.0,
+      "depth": 68.0
+    },
+    "sellerId": "seller1",
+    "brand": "ThunderX3",
+    "sku": "TX3-CH-PRO",
+    "sales": 24,
+    "createdAt": "2023-05-03T13:40:00.000Z",
+    "updatedAt": "2023-05-03T13:40:00.000Z"
+  },
+  {
+    "id": "prod9",
+    "name": "Console PlayStation 5",
+    "description": "Console PlayStation 5 com 825GB SSD, controle DualSense, ray tracing, 4K a 120fps, áudio 3D.",
+    "price": 4499.99,
+    "stock": 5,
+    "category": "Videogames",
+    "images": [
+      "https://example.com/imgs/ps5-1.jpg",
+      "https://example.com/imgs/ps5-2.jpg"
+    ],
+    "discount": 0,
+    "weight": 4.5,
+    "dimensions": {
+      "height": 39.0,
+      "width": 26.0,
+      "depth": 10.4
+    },
+    "sellerId": "seller1",
+    "brand": "Sony",
+    "sku": "SONY-PS5-825",
+    "sales": 38,
+    "createdAt": "2023-05-20T10:10:00.000Z",
+    "updatedAt": "2023-05-20T10:10:00.000Z"
+  },
+  {
+    "id": "prod10",
+    "name": "Monitor Ultrawide",
+    "description": "Monitor ultrawide de 34 polegadas, painel IPS, resolução 3440x1440, 144Hz, tempo de resposta de 1ms, HDR10.",
+    "price": 2999.99,
+    "stock": 7,
+    "category": "Periféricos",
+    "images": [
+      "https://example.com/imgs/monitor-uw-1.jpg",
+      "https://example.com/imgs/monitor-uw-2.jpg"
+    ],
+    "discount": 5,
+    "weight": 7.2,
+    "dimensions": {
+      "height": 45.7,
+      "width": 81.5,
+      "depth": 22.0
+    },
+    "sellerId": "seller1",
+    "brand": "LG",
+    "sku": "LG-MON-UW-34",
+    "sales": 14,
+    "createdAt": "2023-06-08T15:25:00.000Z",
+    "updatedAt": "2023-06-08T15:25:00.000Z"
+  },
+  {
+    "id": "prod11",
+    "name": "Tablet iPad Pro",
+    "description": "iPad Pro 11 polegadas, chip M2, 256GB de armazenamento, Wi-Fi + Cellular, tela Liquid Retina.",
+    "price": 7999.99,
+    "stock": 9,
+    "category": "Eletrônicos",
+    "images": [
+      "https://example.com/imgs/ipad-pro-1.jpg",
+      "https://example.com/imgs/ipad-pro-2.jpg"
+    ],
+    "discount": 0,
+    "weight": 0.47,
+    "dimensions": {
+      "height": 24.7,
+      "width": 17.9,
+      "depth": 0.59
+    },
+    "sellerId": "seller1",
+    "brand": "Apple",
+    "sku": "APL-IPAD-PRO-256",
+    "sales": 22,
+    "createdAt": "2023-06-15T11:35:00.000Z",
+    "updatedAt": "2023-06-15T11:35:00.000Z"
+  },
+  {
+    "id": "prod12",
+    "name": "Caixa de Som Bluetooth",
+    "description": "Caixa de som portátil bluetooth JBL, 20W RMS, à prova d'água, bateria de 12 horas.",
+    "price": 299.99,
+    "stock": 35,
+    "category": "Áudio",
+    "images": [
+      "https://example.com/imgs/jbl-speaker-1.jpg",
+      "https://example.com/imgs/jbl-speaker-2.jpg"
+    ],
+    "discount": 15,
+    "weight": 0.54,
+    "dimensions": {
+      "height": 18.2,
+      "width": 7.4,
+      "depth": 7.4
+    },
+    "sellerId": "seller1",
+    "brand": "JBL",
+    "sku": "JBL-FLIP-5",
+    "sales": 45,
+    "createdAt": "2023-07-02T14:50:00.000Z",
+    "updatedAt": "2023-07-02T14:50:00.000Z"
   }
 ]

@@ -1,4 +1,3 @@
-
 import React, { createContext, useState, useContext, ReactNode } from 'react';
 
 type User = {
@@ -33,8 +32,8 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
       // For demo purposes, we'll just check for a seller email format
       if (email.includes('seller')) {
         setUser({
-          id: '1',
-          name: 'Seller Name',
+          id: 'seller1',
+          name: 'Tech Store',
           email,
           role: 'seller',
           location: {

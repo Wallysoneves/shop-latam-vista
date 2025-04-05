@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { 
@@ -53,8 +52,8 @@ const SellerLayout: React.FC<SellerLayoutProps> = ({ children }) => {
           {/* Sidebar Header */}
           <div className="flex items-center justify-between px-6 py-4 border-b border-gray-800">
             <Link to="/" className="flex items-center">
-              <span className="text-xl font-bold text-market-yellow">Latin</span>
-              <span className="text-xl font-bold text-market-blue">Vista</span>
+              <span className="text-xl font-bold text-market-yellow">MPTW</span>
+              <span className="text-xl font-bold text-market-blue">Solutions</span>
             </Link>
             <button 
               onClick={() => setIsSidebarOpen(false)}
@@ -106,13 +105,24 @@ const SellerLayout: React.FC<SellerLayoutProps> = ({ children }) => {
             <Link
               to="/seller/orders"
               className={`flex items-center px-2 py-2 rounded-md ${
-                location.pathname.includes('/seller/orders') 
+                location.pathname.includes('/seller/orders') && !location.pathname.includes('/seller/orders/create')
                   ? 'bg-market-blue text-white' 
                   : 'text-gray-300 hover:bg-gray-800'
               }`}
             >
               <ShoppingBag size={20} className="mr-3" />
               <span>Pedidos</span>
+            </Link>
+            
+            <Link
+              to="/seller/orders/create"
+              className={`flex items-center px-2 py-2 ml-6 rounded-md ${
+                location.pathname.includes('/seller/orders/create') 
+                  ? 'bg-market-blue text-white' 
+                  : 'text-gray-300 hover:bg-gray-800'
+              }`}
+            >
+              <span>+ Novo Pedido</span>
             </Link>
             
             <Link

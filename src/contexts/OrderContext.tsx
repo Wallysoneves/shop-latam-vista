@@ -1,6 +1,6 @@
-
-import React, { createContext, useState, useContext, ReactNode } from 'react';
+import React, { createContext, useState, useContext, ReactNode, useEffect } from 'react';
 import { CartItem } from '../types/CartItem';
+import ordersData from '../data/orders.json';
 
 export type OrderStatus = 'pending' | 'processing' | 'shipped' | 'delivered' | 'canceled';
 
@@ -20,8 +20,8 @@ export interface Order {
   customerId: string;
   items: CartItem[];
   status: OrderStatus;
-  createdAt: Date;
-  updatedAt: Date;
+  createdAt: Date | string;
+  updatedAt: Date | string;
   total: number;
   shipping: number;
   shippingInfo: ShippingInfo;
@@ -40,10 +40,47 @@ interface OrderContextType {
   getOrdersBySeller: (sellerId: string) => Order[];
 }
 
+// Convertendo as strings de data em objetos Date
+const convertOrderDates = (orders: any[]): Order[] => {
+  return orders.map(order => {
+    try {
+      return {
+        ...order,
+        createdAt: new Date(order.createdAt),
+        updatedAt: new Date(order.updatedAt)
+      };
+    } catch (error) {
+      console.error('Erro ao converter datas do pedido:', error);
+      // Fallback para datas atuais em caso de erro
+      return {
+        ...order,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      };
+    }
+  });
+};
+
 const OrderContext = createContext<OrderContextType | undefined>(undefined);
 
 export const OrderProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [orders, setOrders] = useState<Order[]>([]);
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  // Carregar pedidos mockados ao inicializar
+  useEffect(() => {
+    if (!isLoaded) {
+      try {
+        console.log('Carregando pedidos mockados...');
+        const formattedOrders = convertOrderDates(ordersData);
+        setOrders(formattedOrders);
+      } catch (error) {
+        console.error('Erro ao carregar pedidos:', error);
+      } finally {
+        setIsLoaded(true);
+      }
+    }
+  }, [isLoaded]);
 
   const addOrder = (orderData: Omit<Order, 'id' | 'createdAt' | 'updatedAt'>) => {
     const newOrder: Order = {
