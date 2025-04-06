@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
@@ -30,10 +29,8 @@ const LoginPage = () => {
     setLoading(true);
     
     try {
-      // For demo, we'll set different email formats for customer/seller
-      const emailToUse = loginAs === 'seller' ? `seller-${email}` : email;
-      
-      await login(emailToUse, password);
+      // Usar o email fornecido diretamente, sem modificações
+      await login(email, password);
       
       // Show success message
       toast.success(`Login realizado com sucesso como ${loginAs === 'seller' ? 'vendedor' : 'cliente'}`);

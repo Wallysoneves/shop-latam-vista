@@ -8,6 +8,7 @@ import { CartProvider } from "./contexts/CartContext";
 import { OrderProvider } from "./contexts/OrderContext";
 import { ProductProvider } from "./contexts/ProductContext";
 import { CustomerProvider } from "./contexts/CustomerContext";
+import PrivateRoute from "./components/PrivateRoute";
 
 // Customer pages
 import HomePage from "./pages/HomePage";
@@ -16,6 +17,7 @@ import ProductDetailPage from "./pages/ProductDetailPage";
 import CartPage from "./pages/CartPage";
 import CheckoutPage from "./pages/CheckoutPage";
 import LoginPage from "./pages/LoginPage";
+import AccessDeniedPage from "./pages/AccessDeniedPage";
 
 // Seller pages
 import SellerDashboard from "./pages/seller/SellerDashboard";
@@ -31,13 +33,6 @@ import SellerCreateOrder from "./pages/seller/SellerCreateOrder";
 // Other pages
 import NotFound from "./pages/NotFound";
 
-// Protected Route component
-const ProtectedRoute = ({ element, requiredRole }: { element: JSX.Element, requiredRole?: 'customer' | 'seller' }) => {
-  // This is a simplified version - in a real app, you'd check auth status here
-  // For demo purposes, we'll assume all routes are accessible
-  return element;
-};
-
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -52,76 +47,33 @@ const App = () => (
                 <Sonner />
                 <BrowserRouter>
                   <Routes>
-                    {/* Customer Routes */}
+                    {/* Rotas públicas */}
                     <Route path="/" element={<HomePage />} />
                     <Route path="/products" element={<ProductsPage />} />
                     <Route path="/product/:productId" element={<ProductDetailPage />} />
                     <Route path="/cart" element={<CartPage />} />
-                    <Route path="/checkout" element={
-                      <ProtectedRoute 
-                        element={<CheckoutPage />} 
-                        requiredRole="customer" 
-                      />
-                    } />
                     <Route path="/login" element={<LoginPage />} />
+                    <Route path="/acesso-negado" element={<AccessDeniedPage />} />
                     
-                    {/* Seller Routes */}
-                    <Route path="/seller/dashboard" element={
-                      <ProtectedRoute 
-                        element={<SellerDashboard />} 
-                        requiredRole="seller" 
-                      />
-                    } />
-                    <Route path="/seller/products" element={
-                      <ProtectedRoute 
-                        element={<SellerProducts />} 
-                        requiredRole="seller" 
-                      />
-                    } />
-                    <Route path="/seller/products/create" element={
-                      <ProtectedRoute 
-                        element={<SellerProductCreate />} 
-                        requiredRole="seller" 
-                      />
-                    } />
-                    <Route path="/seller/products/edit/:productId" element={
-                      <ProtectedRoute 
-                        element={<SellerProductEdit />} 
-                        requiredRole="seller" 
-                      />
-                    } />
-                    <Route path="/seller/orders" element={
-                      <ProtectedRoute 
-                        element={<SellerOrders />} 
-                        requiredRole="seller" 
-                      />
-                    } />
-                    <Route path="/seller/orders/:orderId" element={
-                      <ProtectedRoute 
-                        element={<SellerOrderDetail />} 
-                        requiredRole="seller" 
-                      />
-                    } />
-                    <Route path="/seller/orders/create" element={
-                      <ProtectedRoute 
-                        element={<SellerCreateOrder />} 
-                        requiredRole="seller" 
-                      />
-                    } />
-                    <Route path="/seller/analytics" element={
-                      <ProtectedRoute 
-                        element={<SellerAnalytics />} 
-                        requiredRole="seller" 
-                      />
-                    } />
-                    <Route path="/seller/settings" element={
-                      <ProtectedRoute 
-                        element={<SellerSettings />} 
-                        requiredRole="seller" 
-                      />
-                    } />
+                    {/* Rotas protegidas para cliente */}
+                    <Route element={<PrivateRoute allowedRoles={['CLIENTE']} />}>
+                      <Route path="/checkout" element={<CheckoutPage />} />
+                    </Route>
                     
-                    {/* Catch-all and redirects */}
+                    {/* Rotas protegidas para vendedor */}
+                    <Route element={<PrivateRoute allowedRoles={['VENDEDOR']} />}>
+                      <Route path="/seller/dashboard" element={<SellerDashboard />} />
+                      <Route path="/seller/products" element={<SellerProducts />} />
+                      <Route path="/seller/products/create" element={<SellerProductCreate />} />
+                      <Route path="/seller/products/edit/:productId" element={<SellerProductEdit />} />
+                      <Route path="/seller/orders" element={<SellerOrders />} />
+                      <Route path="/seller/orders/:orderId" element={<SellerOrderDetail />} />
+                      <Route path="/seller/orders/create" element={<SellerCreateOrder />} />
+                      <Route path="/seller/analytics" element={<SellerAnalytics />} />
+                      <Route path="/seller/settings" element={<SellerSettings />} />
+                    </Route>
+                    
+                    {/* Catch-all e redirecionamentos */}
                     <Route path="*" element={<NotFound />} />
                   </Routes>
                 </BrowserRouter>

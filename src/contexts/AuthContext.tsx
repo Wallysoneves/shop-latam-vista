@@ -1,75 +1,145 @@
-import React, { createContext, useState, useContext, ReactNode } from 'react';
+import React, { createContext, useState, useContext, ReactNode, useEffect } from 'react';
+import { authService, ILoginResponse, IClienteRegistroRequest, IVendedorRegistroRequest } from '../services/authService';
 
-type User = {
-  id: string;
-  name: string;
+type UserRole = 'CLIENTE' | 'VENDEDOR';
+
+interface User {
+  id: number;
+  nome: string;
   email: string;
-  role: 'customer' | 'seller';
-  location?: {
-    country: string;
-    state: string;
-  };
-  reputation?: number;
-};
+  tipoUsuario: UserRole;
+}
 
 interface AuthContextType {
   user: User | null;
   isAuthenticated: boolean;
-  login: (email: string, password: string) => Promise<void>;
+  login: (email: string, senha: string) => Promise<void>;
   logout: () => void;
-  register: (userData: Omit<User, 'id'>) => Promise<void>;
+  registerCliente: (userData: IClienteRegistroRequest) => Promise<void>;
+  registerVendedor: (userData: IVendedorRegistroRequest) => Promise<void>;
+  recoverPassword: (email: string) => Promise<void>;
+  loading: boolean;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null);
+  const [loading, setLoading] = useState(true);
 
-  const login = async (email: string, password: string) => {
-    // Simulate authentication
-    // In a real app, this would be an API call
-    try {
-      // For demo purposes, we'll just check for a seller email format
-      if (email.includes('seller')) {
-        setUser({
-          id: 'seller1',
-          name: 'Tech Store',
-          email,
-          role: 'seller',
-          location: {
-            country: 'Brasil',
-            state: 'São Paulo'
-          },
-          reputation: 4.8
-        });
-      } else {
-        setUser({
-          id: '2',
-          name: 'Customer Name',
-          email,
-          role: 'customer'
-        });
+  // Verifica se o usuário já está logado ao carregar o componente
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    const storedUser = localStorage.getItem('user');
+    
+    if (token && storedUser) {
+      try {
+        setUser(JSON.parse(storedUser));
+      } catch (error) {
+        console.error('Erro ao recuperar usuário:', error);
+        logout();
       }
+    }
+    
+    setLoading(false);
+  }, []);
+  
+  const login = async (email: string, senha: string) => {
+    try {
+      setLoading(true);
+      const response = await authService.login({ email, senha });
+      
+      const { token, userId, nome, tipoUsuario } = response;
+      
+      // Salva o token e o usuário no localStorage
+      localStorage.setItem('token', token);
+      
+      const userData: User = {
+        id: userId,
+        nome,
+        email,
+        tipoUsuario
+      };
+      
+      localStorage.setItem('user', JSON.stringify(userData));
+      setUser(userData);
     } catch (error) {
-      console.error('Login failed:', error);
-      throw new Error('Invalid credentials');
+      console.error('Erro de login:', error);
+      throw new Error('Credenciais inválidas');
+    } finally {
+      setLoading(false);
     }
   };
 
-  const register = async (userData: Omit<User, 'id'>) => {
-    // Simulate registration
+  const registerCliente = async (userData: IClienteRegistroRequest) => {
     try {
-      setUser({
-        ...userData,
-        id: Math.random().toString(36).substr(2, 9)
-      });
+      setLoading(true);
+      const response = await authService.registrarCliente(userData);
+      
+      const { token, userId, nome, tipoUsuario } = response;
+      
+      // Salva o token e o usuário no localStorage
+      localStorage.setItem('token', token);
+      
+      const user: User = {
+        id: userId,
+        nome,
+        email: userData.email,
+        tipoUsuario
+      };
+      
+      localStorage.setItem('user', JSON.stringify(user));
+      setUser(user);
     } catch (error) {
-      console.error('Registration failed:', error);
-      throw new Error('Registration failed');
+      console.error('Erro no registro:', error);
+      throw new Error('Falha no registro');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const registerVendedor = async (userData: IVendedorRegistroRequest) => {
+    try {
+      setLoading(true);
+      const response = await authService.registrarVendedor(userData);
+      
+      const { token, userId, nome, tipoUsuario } = response;
+      
+      // Salva o token e o usuário no localStorage
+      localStorage.setItem('token', token);
+      
+      const user: User = {
+        id: userId,
+        nome,
+        email: userData.email,
+        tipoUsuario
+      };
+      
+      localStorage.setItem('user', JSON.stringify(user));
+      setUser(user);
+    } catch (error) {
+      console.error('Erro no registro:', error);
+      throw new Error('Falha no registro');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const recoverPassword = async (email: string) => {
+    try {
+      setLoading(true);
+      await authService.recuperarSenha(email);
+    } catch (error) {
+      console.error('Erro na recuperação de senha:', error);
+      throw new Error('Falha na recuperação de senha');
+    } finally {
+      setLoading(false);
     }
   };
 
   const logout = () => {
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
     setUser(null);
   };
 
@@ -80,7 +150,10 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         isAuthenticated: !!user,
         login,
         logout,
-        register
+        registerCliente,
+        registerVendedor,
+        recoverPassword,
+        loading
       }}
     >
       {children}
